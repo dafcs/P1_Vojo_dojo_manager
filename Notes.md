@@ -23,3 +23,5 @@ Check unittesting
     need different class properties?
     need more/different class functions?
 
+# creating tables
+check how dates can be stored and with what type (date date? date int?) same for time.
