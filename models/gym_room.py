@@ -4,4 +4,3 @@ class GymRoom():
         self.capacity = capacity
         self.id = id
 
-
