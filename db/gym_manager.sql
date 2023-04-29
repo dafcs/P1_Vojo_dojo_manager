@@ -19,14 +19,14 @@ CREATE TABLE classes (
 );
 
 CREATE TABLE rooms (
-    id INT PRIMARY KEY
+    id INT PRIMARY KEY,
     capacity INT
 );
 
 CREATE TABLE scheduled_classes (
     id INT PRIMARY KEY,
     class_id INT REFERENCES classes(id) ON DELETE CASCADE,
-    room_id INT REFERENCES rooms(id) ON DELETE CASCADE,
+    room_id INT REFERENCES rooms(id) ON DELETE CASCADE
 );
 
 CREATE TABLE scheduled_time (
@@ -34,4 +34,4 @@ CREATE TABLE scheduled_time (
     date INT,
     time INT,
     scheduled_id INT REFERENCES scheduled_classes(id) ON DELETE CASCADE
-)
+);
