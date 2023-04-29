@@ -7,6 +7,7 @@
     4.1 files
     4.1.1 file content
     4.2 documentation
+    4.3 format file with correct syntax
 5. repositories
 6. templates
 7. console testing

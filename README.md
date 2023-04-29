@@ -58,11 +58,12 @@ psql -d gym_manager -f db/gym_manager.sql
 
 note: this needs to be ran from the parent folder of db (or the folder in which db is in), if this is not 'project_daniel_simoes' then follow below steps:
 
-1. While in the folder project_daniel_simoes start by pasting:
+While in the folder project_daniel_simoes start by pasting:
 ls
 
 this should provide a list of all the items inside the folder project_daniel_simoes
-2. if there is a folder inside that one you will need to navigate to that folder, you can do this by writing cd foldername.
+
+if there is a folder inside that one you will need to navigate to that folder, you can do this by writing cd foldername.
 e.g. if the folder is called 'P1_gym_manager' you would write cd P1_gym_manager
 
 **Running flask**
