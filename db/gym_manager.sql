@@ -31,7 +31,7 @@ CREATE TABLE scheduled_classes (
 
 CREATE TABLE scheduled_time (
     id INT PRIMARY KEY,
-    date INT,
-    time INT,
+    date DATE,
+    time TIME,
     scheduled_id INT REFERENCES scheduled_classes(id) ON DELETE CASCADE
 );

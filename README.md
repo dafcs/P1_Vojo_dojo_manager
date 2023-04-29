@@ -90,7 +90,8 @@ ls
 cd foldername
 (this will change directory to the one specified)
 
-
+database/table visualisation:
+postico
 # ### FOLDERS & FILES ### #
 
 *README.md*
@@ -156,6 +157,11 @@ https://phoenixnap.com/kb/install-flask
 Week_2_day_3 - unittest set up
 https://github.com/codeclan/e64_classnotes/blob/main/week_02/day_3/testing/coffee_shop_testing/testing.md
 
-week_4_day_5 - file set up
+week_4_day_5 - file/table set up
 https://github.com/codeclan/e64_classnotes/tree/main/week_04/day_4/01_many_to_many_quest_advisor/quest_advisor_end
+
+create table data types
+https://www.w3schools.com/sql/sql_dates.asp#:~:text=SQL%20Server%20comes%20with%20the,%2DDD%20HH%3AMI%3ASS
+
+https://www.w3schools.com/sql/sql_dates.asp#:~:text=SQL%20Server%20comes%20with%20the,%2DDD%20HH%3AMI%3ASS
 
