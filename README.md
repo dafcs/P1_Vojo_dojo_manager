@@ -142,26 +142,29 @@ style.css
 
 # ### References ### #
 
-MarkDown guide - for the README file
+*MarkDown guide - for the README file*
 https://www.markdownguide.org/basic-syntax/
 
-psycopg2 installation - for the README file
+*psycopg2 installation - for the README file*
 https://pypi.org/project/psycopg2/
 
-python installation - for the README file
+*python installation - for the README file*
 https://docs.python-guide.org/starting/install3/osx/
 
-flask - for the README file
+*flask - for the README file*
 https://phoenixnap.com/kb/install-flask
 
-Week_2_day_3 - unittest set up
+*Week_2_day_3 - unittest set up*
 https://github.com/codeclan/e64_classnotes/blob/main/week_02/day_3/testing/coffee_shop_testing/testing.md
 
-week_4_day_5 - file/table set up
+*week_4_day_5 - file/table set up*
 https://github.com/codeclan/e64_classnotes/tree/main/week_04/day_4/01_many_to_many_quest_advisor/quest_advisor_end
 
-create table data types
+*create table data types for time and date*
 https://www.w3schools.com/sql/sql_dates.asp#:~:text=SQL%20Server%20comes%20with%20the,%2DDD%20HH%3AMI%3ASS
 
 https://www.w3schools.com/sql/sql_dates.asp#:~:text=SQL%20Server%20comes%20with%20the,%2DDD%20HH%3AMI%3ASS
+
+*date\time syntax*
+https://stackoverflow.com/questions/33810980/date-time-split-in-python
 
