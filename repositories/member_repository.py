@@ -32,7 +32,6 @@ def update(member):
     values = [member.first_name,member.last_name,member.membership_type,member.account_status,member.id]
     run_sql(sql,values)
 
-
 def delete(id):
     sql = 'DELETE FROM members WHERE id = %s'
     values = [id]

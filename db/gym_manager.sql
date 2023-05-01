@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS scheduled_time;
-DROP TABLE IF EXISTS scheduled_classes;
+DROP TABLE IF EXISTS scheduled_lessons;
 DROP TABLE IF EXISTS rooms;
-DROP TABLE IF EXISTS classes;
+DROP TABLE IF EXISTS lessons;
 DROP TABLE IF EXISTS members;
 
 CREATE TABLE members (
@@ -22,9 +22,9 @@ CREATE TABLE rooms (
     capacity INT
 );
 
-CREATE TABLE scheduled_classes (
+CREATE TABLE scheduled_lessons (
     id SERIAL PRIMARY KEY,
-    class_id INT REFERENCES classes(id) ON DELETE CASCADE,
+    class_id INT REFERENCES lessons(id) ON DELETE CASCADE,
     room_id INT REFERENCES rooms(id) ON DELETE CASCADE
 );
 
@@ -32,5 +32,5 @@ CREATE TABLE scheduled_time (
     id SERIAL PRIMARY KEY,
     date DATE,
     time TIME,
-    scheduled_id INT REFERENCES scheduled_classes(id) ON DELETE CASCADE
+    scheduled_id INT REFERENCES scheduled_lessons(id) ON DELETE CASCADE
 );

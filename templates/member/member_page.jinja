@@ -1,0 +1,29 @@
+{% extends 'base.jinja' %}
+
+{% block content %}
+<header class="main-header">
+    <ul>
+        <li class="header-button"><a href="/">Home</a></li>
+        <li class="header-button"><a href="/members">Members</a></li>
+        <li class="header-button"><a href="/lessons">Lessons</a></li>
+    </ul>
+</header>
+<div class="member-display">
+    <div class="member-page-top">
+    <h3>{{member.first_name}} {{member.last_name}}</h3>
+                        <form action="/member/{{member.id}}"><button class="form-button">Edit</button></form>
+                        <form action="/member/{{member.id}}/delete" method="post"><button class="form-button">Remove</button></form>
+    </div>
+        <p>Membership type: {{member.membership_type}}</p>
+        {% if member.account_status == True%}
+        <p class="member-list-unit">Account Status: Active</p>
+        {% endif %}
+        {% if member.account_status == False%}
+        <p class="member-list-unit">Account Status: Inactive</p>
+        {% endif %}
+</div>
+
+registered in classes:
+
+
+{% endblock %}
