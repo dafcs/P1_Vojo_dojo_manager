@@ -1,8 +1,8 @@
 from db.run_sql import run_sql
-from models.gym_room import GymRoom
+from models.room import Room
 
 def save(room):
-    sql = 'INSERT INTO rooms (name,last_name,capacity) VALUES (%s,%s)'
+    sql = 'INSERT INTO rooms (name,last_name,capacity) VALUES (%s,%s) RETURNING *'
     values = [room.name,room.capacity]
     row = run_sql(sql,values)[0]
     room.id = row.id
@@ -14,7 +14,7 @@ def select(id):
     values = [id]
     row = run_sql(sql,values)[0]
     if row != None:
-        result = GymRoom(row['name'],row['capacity'],row['id'])
+        result = Room(row['name'],row['capacity'],row['id'])
     return result
     
 
@@ -23,7 +23,7 @@ def select_all():
     sql = 'SELECT * FROM rooms'
     rows = run_sql(sql)
     for row in rows:
-        gym_room = GymRoom(row['name'],row['capacity'],row['id'])
+        gym_room = Room(row['name'],row['capacity'],row['id'])
         result.append(gym_room)
     return result
 

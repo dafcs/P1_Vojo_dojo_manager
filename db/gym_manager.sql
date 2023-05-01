@@ -12,7 +12,7 @@ CREATE TABLE members (
     account_status BOOLEAN
 );
 
-CREATE TABLE classes (
+CREATE TABLE lessons (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255)
 );

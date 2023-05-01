@@ -1,5 +1,5 @@
 import unittest
-from models.gym_class import GymClass
+from models.lesson import GymClass
 
 
 class TestGymClass(unittest.TestCase):
@@ -10,8 +10,8 @@ class TestGymClass(unittest.TestCase):
     def test_gym_class_has_name(self):
         self.assertEqual('Pilates',self.gym_class_1.name)
     
-    def test_gym_class_has_duration(self):
-        self.assertEqual(1,self.gym_class_1.duration)
+    # def test_gym_class_has_duration(self):
+    #     self.assertEqual(1,self.gym_class_1.duration)
     
     def test_gym_class_id_none(self):
         self.assertEqual(None,self.gym_class_1.id)

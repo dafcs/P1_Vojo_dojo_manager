@@ -1,5 +1,5 @@
 import unittest
-from models.gym_room import GymRoom
+from models.room import GymRoom
 
 class TestGymRoom(unittest.TestCase):
     def setUp(self):

@@ -1,0 +1,52 @@
+{% extends 'base.jinja' %}
+
+{% block content %}
+update member
+
+<form action="/member/{{member.id}}/edit" method="post">
+
+  <div>
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name" value="{{member.first_name}}" required autofocus>
+  </div>
+
+  <div>
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name" value="{{member.last_name}}" required>
+  </div>
+
+  <div>
+    <label for="membership_type">Membership type:</label>
+    <select id="membership_type" name="membership_type">
+    {% if member.membership_type == "Standard" %}
+            <option value="Standard" selected="selected">Standard</option>
+            <option value="Premium">Premium</option>
+    {%endif%}
+    {% if member.membership_type == "Premium" %} 
+            <option value="Standard">Standard</option>
+            <option value="Premium" selected="selected">Premium</option>
+    {%endif%}
+    </select>
+    </div>
+
+    <div>
+        <label for="account_status">Account Active:</label>
+        <select id="account_status" name="account_status">
+    {% if member.account_status == True %}
+            <option value="True" selected="selected">True</option>
+            <option value="False">False</option>
+    {%endif%}
+    {% if member.account_status == False %}
+            <option value="True" >True</option>
+            <option value="False" selected="selected">False</option>
+    {%endif%}
+    </select>
+{# 
+        <input type="text" id="account_status" name="account_status" value="{{member.account_status}}" required>
+    </div> 
+  #}
+
+  <button type="submit">Update</button>
+
+</form>
+{% endblock %}

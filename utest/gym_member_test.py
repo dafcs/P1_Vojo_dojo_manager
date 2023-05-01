@@ -1,5 +1,5 @@
 import unittest
-from models.gym_member import GymMember
+from models.member import GymMember
 
 class TestGymMember(unittest.TestCase):
     def setUp(self):
@@ -27,3 +27,13 @@ class TestGymMember(unittest.TestCase):
     def test_gym_member_return_status(self):
         self.assertEqual(True,self.gym_member.account_status)
 
+    def test_gym_member_change_to_premium(self):
+        self.gym_member.change_membership_type_to_premium()
+        self.assertEqual('Premium',self.gym_member.membership_type)
+
+    def test_gym_member_change_to_standard(self):
+        self.gym_member.change_membership_type_to_standard()
+        self.assertEqual('Standard',self.gym_member.membership_type)
+
+    def test_gym_member_return_membership_type(self):
+        self.assertEqual('Standard',self.gym_member.return_membership_type())        

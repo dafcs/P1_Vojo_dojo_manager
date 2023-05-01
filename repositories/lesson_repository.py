@@ -1,5 +1,5 @@
 from db.run_sql import run_sql
-from models.gym_class import GymClass
+from models.lesson import Lesson
 
 
 def save(gym_class):
@@ -17,7 +17,7 @@ def select(id):
     row = run_sql(sql,values)
     if row != None:
         val = row[0]
-        result = GymClass(val['name'],val['id'])
+        result = Lesson(val['name'],val['id'])
     return result
     
 
@@ -26,7 +26,7 @@ def select_all():
     sql = 'SELECT * FROM classes'
     rows = run_sql(sql)
     for row in rows:
-        gym_class = GymClass(row['name'],row['id'])
+        gym_class = Lesson(row['name'],row['id'])
         result.append(gym_class)
     return result
 
