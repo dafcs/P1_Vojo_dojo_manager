@@ -1,6 +1,4 @@
 class Lesson():
-    def __init__(self,name,date,time,id = None):
+    def __init__(self,name, id = None):
         self.name = name
-        self.date = date
-        self.time = time
         self.id = id
