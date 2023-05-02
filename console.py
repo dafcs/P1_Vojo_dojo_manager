@@ -11,10 +11,10 @@ member_repo.delete_all()
 #testing class_repo **********************
 
 # #tested - works
-gym_lesson_1 = Lesson('Pilates')
-gym_lesson_2 = Lesson('Calistenics')
-gym_lesson_3 = Lesson('Body Combat')
-gym_lesson_4 = Lesson('Judo')
+gym_lesson_1 = Lesson('Judo',2023/4/1,12:00:00)
+gym_lesson_2 = Lesson('Taekwondo',2023/4/2,13:00:00)
+gym_lesson_3 = Lesson('Body Combat',2023/4/5,14:00:00)
+gym_lesson_4 = Lesson('Judo',2023/4/5,15:00:00)
 class_list = [gym_lesson_1,gym_lesson_2,gym_lesson_3,gym_lesson_4]
 for lesson in class_list:
     class_repo.save(lesson)

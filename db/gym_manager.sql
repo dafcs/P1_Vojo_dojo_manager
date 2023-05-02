@@ -1,6 +1,6 @@
 -- DROP TABLE IF EXISTS scheduled_time;
 DROP TABLE IF EXISTS enrollments;
-DROP TABLE IF EXISTS rooms;
+-- DROP TABLE IF EXISTS rooms;
 DROP TABLE IF EXISTS lessons;
 DROP TABLE IF EXISTS members;
 
@@ -14,13 +14,15 @@ CREATE TABLE members (
 
 CREATE TABLE lessons (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255)
+    name VARCHAR(255),
+    date DATE,
+    time TIME
 );
 
-CREATE TABLE rooms (
-    id SERIAL PRIMARY KEY,
-    capacity INT
-);
+-- CREATE TABLE rooms (
+--     id SERIAL PRIMARY KEY,
+--     capacity INT
+-- );
 
 CREATE TABLE enrollments (
     id SERIAL PRIMARY KEY,
