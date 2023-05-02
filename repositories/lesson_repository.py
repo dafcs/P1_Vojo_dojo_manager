@@ -39,7 +39,19 @@ def delete_all():
     sql = 'DELETE FROM lessons'
     run_sql(sql)
 
-def update(member):
-    sql = 'UPDATE lessons SET (name) = (%s) WHERE id = %s'
-    values = [member.name]
+def update(lesson):
+    sql = 'UPDATE lessons SET name = %s WHERE id = %s'
+    values = [lesson.name,lesson.id]
     run_sql(sql,values)
+
+def lessons_for_member(member):
+    locations = []
+    sql = "SELECT lessons.* FROM lessons INNER JOIN enrollments ON enrollment.lesson_id = lesson.id WHERE member_id = %s"
+    values = [member.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        location = Lesson(row['name'], row['category'], row['id'])
+        locations.append(location)
+
+    return locations

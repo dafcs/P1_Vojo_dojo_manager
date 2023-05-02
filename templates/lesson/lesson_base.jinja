@@ -7,36 +7,23 @@
     <ul>
         <li class="header-button"><a href="/">Home</a></li>
         <li class="header-button"><a href="/members">Members</a></li>
-        <li class="header-button"><a href="/lessons/add">Add Leson</a></li>
+        <li class="header-button"><a href="/lesson_form">Add Lesson</a></li>
     </ul>
 </header>
 
-{% for member in members %}
+{% for lesson in lessons %}
 
     <div class="member-list-area">
         <ul>
             <li class="member-list-unit"> 
-            <p> Name: {{member.first_name}} {{member.last_name}}</p>
+            <p> Lesson: {{lesson.name}}</p>
             <div class="button-container">
-                    <form action="/member/{{member.id}}"><button class="form-button">Edit</button></form>
-                    <form action="/member/{{member.id}}/delete" method="post"><button class="form-button">Remove</button></form>
+                    <form action="/lesson/{{lesson.id}}"><button class="form-button">Edit</button></form>
+                    <form action="/lesson/{{lesson.id}}/delete" method="post"><button class="form-button">Remove</button></form>
                 </li>
             </div>
         </ul>
     </div>
   {% endfor %}
-
-below just to check what it looks like
-<table>
-  <tr>
-    <th>Name</th>
-  
-  </tr>
-  {% for member in members %}
-  <tr>
-    <td><a href="/members/{{ member.id }}"> {{member.name}} </a></td>
-  </tr>
-  {% endfor %}
-</table>
 
 {% endblock %}

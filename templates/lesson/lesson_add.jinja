@@ -1,45 +1,31 @@
 {% extends 'base.jinja' %}
 
 {% block content %}
-<header>
+
 <header class="main-header">
     <ul>
         <li class="header-button"><a href="/">Home</a></li>
-        <li class="header-button"><a href="/member_base">Members</a></li>
-        <li class="header-button"><a href="/member_form">///All sessions</a></li>
+        <li class="header-button"><a href="/members">Members</a></li>
+        <li class="header-button"><a href="/lessons">Lessons</a></li>
 
     </ul>
 </header>
 
-<h1>Add Member</h1>
+<h1>Open Lesson</h1>
 
-<form action="/member_form/add" method="post">
-
-  <div>
-    <label for="first_name">First Name:</label>
-    <input type="text" id="first-name" name="first_name" placeholder="Insert here" required autofocus>
+<form action="/lesson_form/add" method="post">
+    <label for="lesson_name">Lesson:</label>
+      <select id="lesson_name" name="lesson_name" required>
+        <option value="" selected></option>
+        <option value="open hour">Open Hour</option>
+        <option value="judo">Judo</option>
+        <option value="taekwondo">Taekwondo</option>
+        <option value="jiu jitsu">jiu jitsu</option>
+        <option value="pilates">Karate</option>
+        <option value="pilates">Mixed Martia Arts</option>
+        <option value="Body Combat">Body Combat</option>
+      </select>
   </div>
-
-  <div>
-    <label for="last_name">Last Name:</label>
-    <input type="text" id="last_name" name="last_name" placeholder="Insert here" required>
-  </div>
-
-  {# <div>
-    <label for="publisher">Publisher:</label>
-    <input type="text" id="publisher" name="publisher" placeholder="Publisher" required>
-  </div> #}
-
-
-  <div>
-    <label for="membership_type">Membership type:</label>
-    <select id="membership_type" name="membership_type">
-        <option value="Standard">Standard</option>
-        <option value="Premium">Premium</option>
-
-    </select>
-  </div>
-
   <button type="submit">Add</button>
 
 </form>

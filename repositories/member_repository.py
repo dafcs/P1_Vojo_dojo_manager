@@ -23,8 +23,8 @@ def select_all():
     sql = 'SELECT * FROM members'
     rows = run_sql(sql)
     for row in rows:
-        gym_member = Member(row['first_name'],row['last_name'],row['membership_type'],row['account_status'],row['id'])
-        result.append(gym_member)
+        member = Member(row['first_name'],row['last_name'],row['membership_type'],row['account_status'],row['id'])
+        result.append(member)
     return result
 
 def update(member):

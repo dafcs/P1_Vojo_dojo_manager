@@ -7,6 +7,7 @@
     <ul>
         <li class="header-button"><a href="/">Home</a></li>
         <li class="header-button"><a href="/member_form">Add Member</a></li>
+        <li class="header-button"><a href="/enroll">Enroll</a></li>
     </ul>
 </header>
 
@@ -31,18 +32,5 @@
         </ul>
     </div>
   {% endfor %}
-
-below just to check what it looks like
-<table>
-  <tr>
-    <th>Name</th>
-  
-  </tr>
-  {% for member in members %}
-  <tr>
-    <td><a href="/members/{{ member.id }}"> {{member.name}} </a></td>
-  </tr>
-  {% endfor %}
-</table>
 
 {% endblock %}

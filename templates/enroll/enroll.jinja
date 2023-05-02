@@ -1,0 +1,31 @@
+{% extends 'base.jinja' %}
+{% block content %}
+
+<header class="main-header">
+    <ul>
+        <li class="header-button"><a href="/">Home</a></li>
+        <li class="header-button"><a href="/members">Members</a></li>
+        <li class="header-button"><a href="/lessons">Lessons</a></li>
+
+    </ul>
+</header>
+<body>
+    <form action="/enroll" method="post">
+    <label for="enroll_lesson">Lesson:</label>
+    <select id="enroll_lesson">
+    <option value="LESSON NOT SELECTED">Please select</option>
+    {% for lesson in lessons %}
+            <option value='{{lesson.id}}'>{{lesson.name}}</option>
+    {% endfor %}
+    </select>
+    <label for="enroll_member">Member:</label>
+        <select id="enroll_member" name="enroll_member" required>
+            <option value="MEMBER NOT SELECTED">Please select</option>
+            {% for member in members %}
+                <option value='{{member.id}}'>{{member.first_name}}</option>
+            {% endfor %}
+        </select>
+        <button class="form-button">Enroll</button>
+    </form>  
+</body>
+{% endblock %}

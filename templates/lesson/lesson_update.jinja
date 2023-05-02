@@ -1,0 +1,27 @@
+{% extends 'base.jinja' %}
+
+{% block content %}
+
+<h1>Update lesson</h1>
+
+<form action="/lesson/{{lesson.id}}/update" method="post">
+
+<p> Current lesson: {{lesson.name}}</p>
+  <div>
+    <label for="lesson_name">Lesson:</label>
+      <select id="lesson_name" name="lesson_name" required>
+        <option value="" selected></option>
+        <option value="open hour">Open Hour</option>
+        <option value="judo">Judo</option>
+        <option value="taekwondo">Taekwondo</option>
+        <option value="jiu jitsu">jiu jitsu</option>
+        <option value="karate">Karate</option>
+        <option value="mma">Mixed Martia Arts</option>
+        <option value="Body Combat">Body Combat</option>
+      </select>
+  </div>
+
+  <button type="submit">Update</button>
+
+</form>
+{% endblock %}
