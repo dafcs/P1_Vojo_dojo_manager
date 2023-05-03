@@ -14,6 +14,7 @@
 <h1>Open Lesson</h1>
 
 <form action="/lesson_form/add" method="post">
+    <div class="form-styling">
     <label for="lesson_name">Lesson:</label>
       <select id="lesson_name" name="lesson_name" required>
         <option value="" selected></option>
@@ -25,9 +26,10 @@
         <option value="pilates">Mixed Martia Arts</option>
         <option value="Body Combat">Body Combat</option>
       </select>
+        <button class="form-button" type="submit">Add</button>
   </div>
-  <button type="submit">Add</button>
 
+</div>
 </form>
 
 {% endblock %}

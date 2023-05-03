@@ -10,22 +10,35 @@
 </nav>
 
 <h1>Enroll Members</h1>
+
     <form action="/enroll" method="post">
-    <label for="enroll_lesson">Lesson:</label>
-    <select id="enroll_lesson" name="lesson_id">
-    <option value="LESSON NOT SELECTED">Please select</option>
-    {% for lesson in lessons %}
+    <div class="form-styling">
+         {# <div class="form-styling"> #}
+        <label for="enroll_lesson">Lesson:</label>
+        <select id="enroll_lesson" name="lesson_id" required autofocus>
+        <option value="">Please select</option>
+       
+    {% for lesson in lessons %} 
+
             <option value='{{lesson.id}}'>{{lesson.name}}</option>
     {% endfor %}
     </select>
+
+
     <label for="enroll_member">Member:</label>
         <select id="enroll_member" name="member_id" required>
-            <option value="MEMBER NOT SELECTED">Please select</option>
+            <option value="">Please select</option>
+            
             {% for member in members %}
+    
                 <option value='{{member.id}}'>{{member.first_name}}</option>
             {% endfor %}
+            
         </select>
-        <button class="form-button">Enroll</button>
+               <button class="form-button">Enroll</button>
+        {# </div> #}
+ 
+   </div>
     </form>  
 
 {% endblock %}

@@ -14,7 +14,7 @@
 <h1>Update lesson</h1>
 
 <form action="/lesson/{{lesson.id}}/update" method="post">
-
+    <div class="form-styling">
 <p> Current lesson: {{lesson.name}}</p>
   <div>
     <label for="lesson_name">Lesson:</label>
@@ -29,7 +29,7 @@
         <option value="Body Combat">Body Combat</option>
       </select>
   </div>
-
+</div>
   <button type="submit">Update</button>
 
 </form>
