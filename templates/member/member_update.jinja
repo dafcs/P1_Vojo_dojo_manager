@@ -1,10 +1,21 @@
 {% extends 'base.jinja' %}
 
 {% block content %}
-update member
+
+<nav class="nav-area">
+    <ul class="nav-list">
+        <li class="nav-button"><a href="/">Home</a></li>
+        <li class="nav-button"><a href="/members">Members</a></li>
+        <li class="nav-button"><a href="/member_form">Lessons</a></li>
+        <li class="nav-button"><a href="/enroll">Enroll</a></li>
+    </ul>
+</nav>
+
+<h1>update member</h1>
 
 <form action="/member/{{member.id}}/update" method="post">
 
+<div class="form-styling">
   <div>
     <label for="first_name">First Name:</label>
     <input type="text" id="first_name" name="first_name" value="{{member.first_name}}" required autofocus>
@@ -47,6 +58,6 @@ update member
   #}
 
   <button type="submit">Update</button>
-
+</div>
 </form>
 {% endblock %}

@@ -21,5 +21,6 @@ def member_enroll():
     member_id = request.form['member_id']
     enroll = Enroll(lesson_id,member_id)
     enroll_repo.save(enroll)
-    redirect('/enroll')
+    return redirect('/enroll')
     
+

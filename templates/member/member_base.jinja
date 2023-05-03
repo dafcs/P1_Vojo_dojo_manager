@@ -2,26 +2,25 @@
 
 {% block content %}
 
-
-<header class="main-header">
-    <ul>
-        <li class="header-button"><a href="/">Home</a></li>
-        <li class="header-button"><a href="/member_form">Add Member</a></li>
-        <li class="header-button"><a href="/enroll">Enroll</a></li>
+<nav class="nav-area">
+    <ul class="nav-list">
+        <li class="nav-button"><a href="/">Home</a></li>
+        <li class="nav-button"><a href="/member_form">Add Member</a></li>
+        <li class="nav-button"><a href="/enroll">Enroll</a></li>
     </ul>
-</header>
-
+</nav>
+<h1>All Members</h1>
 {% for member in members %}
 
     <div class="member-list-area">
         <ul>
             <li class="member-list-unit">Name:<a href="member/{{member.id}}/show"> {{member.first_name}} {{member.last_name}}</a>
-            <li class="member-list-unit">Membership type: {{member.membership_type}}</li>
+            <li class="member-list-unit">Type: {{member.membership_type}}</li>
             {% if member.account_status == True%}
-            <li class="member-list-unit">Account Status: Active</li>
+            <li class="member-list-unit">Status: Active</li>
             {% endif %}
             {% if member.account_status == False%}
-            <li class="member-list-unit">Account Status: Inactive</li>
+            <li class="member-list-unit">Status: Inactive</li>
             {% endif %}
 
             <div class="button-container">

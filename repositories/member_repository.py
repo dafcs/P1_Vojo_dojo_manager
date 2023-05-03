@@ -40,3 +40,13 @@ def delete(id):
 def delete_all():
     sql = 'DELETE FROM members'
     run_sql(sql)
+
+def members_for_lesson(lesson):
+    members_list = []
+    sql = "SELECT members.* FROM members INNER JOIN enrollments ON enrollments.member_id = members.id WHERE lesson_id = %s"
+    values  = [lesson.id]
+    results = run_sql(sql,values)
+    for row in results:
+        member = Member(row['first_name'],row['last_name'],row['membership_type'],row['account_status'],row['id'])
+        members_list.append(member)
+    return members_list

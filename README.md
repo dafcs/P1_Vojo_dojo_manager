@@ -168,3 +168,8 @@ https://www.w3schools.com/sql/sql_dates.asp#:~:text=SQL%20Server%20comes%20with%
 *date\time syntax*
 https://stackoverflow.com/questions/33810980/date-time-split-in-python
 
+*images*
+https://www.w3schools.com/html/html_images_background.asp
+
+https://www.pexels.com/
+

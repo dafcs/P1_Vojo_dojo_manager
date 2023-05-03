@@ -2,21 +2,20 @@
 
 {% block content %}
 
-<header>
-<header class="main-header">
-    <ul>
-        <li class="header-button"><a href="/">Home</a></li>
-        <li class="header-button"><a href="/members">Members</a></li>
-        <li class="header-button"><a href="/lesson_form">Add Lesson</a></li>
+
+<nav class="nav-area">
+    <ul class="nav-list">
+        <li class="nav-button"><a href="/">Home</a></li>
+        <li class="nav-button"><a href="/members">Members</a></li>
+        <li class="nav-button"><a href="/lesson_form">Add Lesson</a></li>
     </ul>
-</header>
+</nav>
 
 {% for lesson in lessons %}
 
     <div class="member-list-area">
         <ul>
-            <li class="member-list-unit"> 
-            <p> Lesson: {{lesson.name}}</p>
+            <li class="member-list-unit">Lesson:<a href="lesson/{{lesson.id}}/show">  {{lesson.name}}</a>
             <div class="button-container">
                     <form action="/lesson/{{lesson.id}}"><button class="form-button">Edit</button></form>
                     <form action="/lesson/{{lesson.id}}/delete" method="post"><button class="form-button">Remove</button></form>

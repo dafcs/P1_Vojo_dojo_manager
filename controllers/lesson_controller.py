@@ -43,7 +43,9 @@ def lesson_delete(id):
 @lessons_blueprint.route('/lesson/<id>/show', methods=['GET'])
 def lesson_show(id):
     lesson = lesson_repo.select(id)
-    return render_template('/lesson/lesson_page.jinja', lesson = lesson)
+    members = member_repo.members_for_lesson(lesson)
+    return render_template('/lesson/lesson_page.jinja', lesson = lesson,members=members)
+
 
 # @lessons_blueprint.route('/enroll',methods=['GET'])
 # def lessons_enroll():

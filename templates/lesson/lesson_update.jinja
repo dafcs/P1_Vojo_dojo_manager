@@ -2,6 +2,15 @@
 
 {% block content %}
 
+<nav class="nav-area">
+    <ul class="nav-list">
+        <li class="nav-button"><a href="/">Home</a></li>
+        <li class="nav-button"><a href="/members">Members</a></li>
+        <li class="nav-button"><a href="/lessons">Lessons</a></li>
+        <li class="nav-button"><a href="/enroll">Enroll</a></li>
+    </ul>
+</nav>
+
 <h1>Update lesson</h1>
 
 <form action="/lesson/{{lesson.id}}/update" method="post">

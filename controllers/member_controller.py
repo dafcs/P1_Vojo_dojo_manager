@@ -2,6 +2,7 @@ from db.run_sql import run_sql
 from flask import Blueprint
 from flask import request, render_template, redirect
 import repositories.member_repository as member_repo
+import repositories.lesson_repository as lesson_repo
 from models.member import Member
 
 member_blueprint = Blueprint("member", __name__)
@@ -48,4 +49,5 @@ def member_delete(id):
 @member_blueprint.route('/member/<id>/show', methods=['GET'])
 def member_show(id):
     member = member_repo.select(id)
-    return render_template('/member/member_page.jinja', member = member)
+    lessons = lesson_repo.lessons_for_member(member)
+    return render_template('/member/member_page.jinja', member = member,lessons = lessons)

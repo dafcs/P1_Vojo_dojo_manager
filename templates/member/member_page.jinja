@@ -1,13 +1,15 @@
 {% extends 'base.jinja' %}
 
 {% block content %}
-<header class="main-header">
-    <ul>
-        <li class="header-button"><a href="/">Home</a></li>
-        <li class="header-button"><a href="/members">Members</a></li>
-        <li class="header-button"><a href="/lessons">Lessons</a></li>
+
+<nav class="nav-area">
+    <ul class="nav-list">
+        <li class="nav-button"><a href="/">Home</a></li>
+        <li class="nav-button"><a href="/members">Members</a></li>
+        <li class="nav-button"><a href="/lessons">Lessons</a></li>
     </ul>
-</header>
+</nav>
+
 <div class="member-display">
     <div class="member-page-top">
     <h3>{{member.first_name}} {{member.last_name}}</h3>
@@ -23,7 +25,14 @@
         {% endif %}
 </div>
 
-registered in classes:
+<h3>registered in classes:</h3>
 
+{% for lesson in lessons: %}
+<ul>
+<li><p><a href="/lesson/{{lesson.id}}/show">{{lesson.name}}</a></p>
+</li>
+</ul>
+    
+{% endfor %}
 
 {% endblock %}

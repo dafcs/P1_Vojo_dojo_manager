@@ -1,12 +1,27 @@
 {% extends 'base.jinja' %}
 
 {% block content %}
-<header class="main-header">
-    <ul>
-        <li class="header-button"><a href="/members">Members</a></li>
-        <li class="header-button"><a href="/lessons">Lessons</a></li>
-        <li class="header-button"><a href="/enroll">Enroll</a></li>
-    </ul>
-<h1>yay index page</h1>
 
+</div>
+<body>
+<div class="action-box">
+    <div class="nav-container">
+        <img class="tainer-image"  src="static/images/guy_kicking.jpg"/>
+        <div class="myanchor">
+            <a class="anchor" href="/members">Manage Members</a>
+        </div>
+    </div>
+    <div class="nav-container">
+        <img class="tainer-image"  src="static/images/karate_fighter.jpg"/>
+        <div class="myanchor">
+        <a class="anchor" href="/lessons">Manage Lessons</a>
+        </div>
+    </div>
+    <div class="nav-container">
+        <img class="tainer-image"  src="static/images/guy_kicking.jpg"/>
+        <div class="myanchor">
+        <a class="anchor" href="/enroll">Enroll</a>
+        </div>
+    </div>
+</div>
 {% endblock %}

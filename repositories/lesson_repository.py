@@ -45,13 +45,11 @@ def update(lesson):
     run_sql(sql,values)
 
 def lessons_for_member(member):
-    locations = []
-    sql = "SELECT lessons.* FROM lessons INNER JOIN enrollments ON enrollment.lesson_id = lesson.id WHERE member_id = %s"
+    lessons_list = []
+    sql = "SELECT lessons.* FROM lessons INNER JOIN enrollments ON enrollments.lesson_id = lessons.id WHERE member_id = %s"
     values = [member.id]
     results = run_sql(sql, values)
-
     for row in results:
-        location = Lesson(row['name'], row['category'], row['id'])
-        locations.append(location)
-
-    return locations
+        lesson = Lesson(row['name'],row['id'])
+        lessons_list.append(lesson)
+    return lessons_list
