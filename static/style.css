@@ -76,7 +76,7 @@ body {
 
 .action-box {
     margin: 5rem;
-    margin-top: 10vw;
+    margin-top: 5vw;
     display:flex;
     justify-content: space-around;
 
@@ -199,17 +199,20 @@ a:hover {
 .footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     background-color: black;
     color: rgb(213, 212, 212);
     font-size: 13px;
     text-align: center;
     padding: 7px;
 }
-
+.footer p {
+    margin-left: 5vw;
+}
 #mymessage {
     color: grey;
     font-size: smaller;
