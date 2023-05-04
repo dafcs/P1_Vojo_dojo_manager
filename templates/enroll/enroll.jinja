@@ -5,17 +5,17 @@
     <ul class="nav-list">
         <li class="nav-button"><a href="/">Home</a></li>
         <li class="nav-button"><a href="/members">Members</a></li>
-        <li class="nav-button"><a href="/member_form">Lessons</a></li>
+        <li class="nav-button"><a href="/lessons">Lessons</a></li>
     </ul>
 </nav>
 
-<h1>Enroll Members</h1>
+<h1>Enroll Member</h1>
 
     <form action="/enroll" method="post">
     <div class="form-styling">
          {# <div class="form-styling"> #}
         <label for="enroll_lesson">Lesson:</label>
-        <select id="enroll_lesson" name="lesson_id" required autofocus>
+        <select class="enroll_lesson" id="enroll_lesson" name="lesson_id" required autofocus>
         <option value="">Please select</option>
        
     {% for lesson in lessons %} 
@@ -26,12 +26,12 @@
 
 
     <label for="enroll_member">Member:</label>
-        <select id="enroll_member" name="member_id" required>
+        <select class="enroll_lesson" id="enroll_member" name="member_id" required>
             <option value="">Please select</option>
             
             {% for member in members %}
     
-                <option value='{{member.id}}'>{{member.first_name}}</option>
+                <option value='{{member.id}}'>{{member.first_name}} {{member.last_name}}</option>
             {% endfor %}
             
         </select>

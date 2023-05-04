@@ -193,7 +193,7 @@ a:hover {
 }
 
 .enroll_lesson {
-    width: 10vw;
+    width: 15vw;
 }
 
 .footer {
@@ -222,4 +222,41 @@ a:hover {
 
 .mem-add-label {
     margin: 15px;
+}
+
+.list-styling {
+    text-decoration: none;
+    list-style: none;
+    border-left:solid thin white;
+    border-right:solid thin white;
+}
+
+.list-styling > li > a {
+    padding: 10px;
+}
+.member-page-top {
+    display: flex;
+    align-items: center;
+    /* gap: 2rem; */
+    margin-left: 10px;
+    border-bottom: solid thin;
+    border-top: solid thin;
+    flex-direction: column;
+}
+.member-button {
+    display: flex;
+}
+.member-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-left:1rem;
+}
+#registered {
+    justify-content: center;
+    margin-left: 10vw;
+    text-align: center;
+}
+#mem-les-show {
+    margin-left: -2rem;
 }

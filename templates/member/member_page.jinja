@@ -9,13 +9,16 @@
         <li class="nav-button"><a href="/lessons">Lessons</a></li>
     </ul>
 </nav>
-
+<h1>Member Page</h1>
 <div class="member-display">
     <div class="member-page-top">
-    <h3>{{member.first_name}} {{member.last_name}}</h3>
-                        <form action="/member/{{member.id}}"><button class="form-button">Edit</button></form>
-                        <form action="/member/{{member.id}}/delete" method="post"><button class="form-button">Remove</button></form>
+        <h2>{{member.first_name}} {{member.last_name}}</h2>
+        <div class="member-button">
+            <form action="/member/{{member.id}}"><button class="form-button">Edit</button></form>
+            <form action="/member/{{member.id}}/delete" method="post"><button class="form-button">Remove</button></form>
+        </div>
     </div>
+    <div class="member-details">
         <p>Membership type: {{member.membership_type}}</p>
         {% if member.account_status == True%}
         <p class="member-list-unit">Account Status: Active</p>
@@ -23,16 +26,22 @@
         {% if member.account_status == False%}
         <p class="member-list-unit">Account Status: Inactive</p>
         {% endif %}
+    </div>
+
 </div>
 
-<h3>registered in classes:</h3>
+<p id="registered">Registered in Lessons</p>
 
 {% for lesson in lessons: %}
-<ul>
-<li><p><a href="/lesson/{{lesson.id}}/show">{{lesson.name}}</a></p>
-</li>
-</ul>
-    
+
+    <ul id="mem-les-show">
+    <div class="list-styling">
+        <li>
+        <a href="/lesson/{{lesson.id}}/show">{{lesson.name}}</a>
+        </li>
+    </div>
+    </ul>
+
 {% endfor %}
 
 {% endblock %}
