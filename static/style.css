@@ -225,10 +225,15 @@ a:hover {
 }
 
 .list-styling {
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     list-style: none;
-    border-left:solid thin white;
-    border-right:solid thin white;
+    border-top:solid thin white;
+    border-bottom:solid thin white;
+    border-radius: 8px;
+    align-items: center;
+    padding: 15px;
 }
 
 .list-styling > li > a {
@@ -239,9 +244,9 @@ a:hover {
     align-items: center;
     /* gap: 2rem; */
     margin-left: 10px;
-    border-bottom: solid thin;
     border-top: solid thin;
     flex-direction: column;
+    border-radius: 8px;
 }
 .member-button {
     display: flex;
@@ -253,10 +258,13 @@ a:hover {
     margin-left:1rem;
 }
 #registered {
+    display: flex;
     justify-content: center;
-    margin-left: 10vw;
-    text-align: center;
 }
 #mem-les-show {
     margin-left: -2rem;
+}
+
+#home-title {
+    margin-top: 5rem;
 }
